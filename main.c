@@ -54,17 +54,17 @@ double cotangens(double angle){
   }
   
 int main(void) {
-  int x,operationChoice2;
+  int operationChoice1,operationChoice2;
   double a,b,result, memory = 0.0;
   do {
     printf("Pamięć: %lf\n", memory);
     printf("  Wybierz:\n  1 - działania na liczbach\n  2 - funkcje trygonometryczne\n");
-    scanf("%d",&x);
+    scanf("%d",&operationChoice1);
     
-    if(x == 1) {
-      printf("  Wybierz\n  1 - dodawanie\n  2 - odejmowanie\n  3 mnożenia\n  4 - dzielenie\n");
+    if(operationChoice1 == 1) {
+      printf("  1 - dodawanie\n  2 - odejmowanie\n  3 - mnożenie\n  4 - dzielenie\n  Wybór:\n");
       scanf("%d", &operationChoice2);
-      printf("podaj dwie liczby\n");
+      printf("  Podaj dwie liczby\n");
       scanf("%lf", &a);
       scanf("%lf", &b);
 
@@ -86,11 +86,11 @@ int main(void) {
         break;
       }
   }
-  if(x==2){
+  if(operationChoice1==2){
     double angle;
-    printf("  Wybierz:\n  5 - sin\n  6 - cos\n  7 - tg\n  8 - ctg\n ");
+    printf("  5 - sin\n  6 - cos\n  7 - tg\n  8 - ctg\n  Wybór:\n");
     scanf("%d",&operationChoice2);
-    printf("Podaj kąt (w stopniach)\n");
+    printf("  Podaj kąt (w stopniach)\n");
     scanf("%lf", &angle);
       switch(operationChoice2){
         case 5:
@@ -114,7 +114,7 @@ int main(void) {
         int memoryOperation;
         printf("%lf\n", result);
         saveResultToFile(result);
-        printf("1 - dodaj do pamięci\n2 - odejmij od pamięci\n3 - usuń pamięć\n0 - nic nie rób\nWybór: ");
+        printf("  0 - nic nie rób\n  1 - dodaj do pamięci\n  2 - odejmij od pamięci\n  3 - usuń pamięć\n    Wybór:\n ");
         scanf("%d", &memoryOperation);
 
         switch (memoryOperation) {
@@ -134,5 +134,5 @@ int main(void) {
           break;
         }
       }
-  } while(x<3);
+  } while(operationChoice1<3);
 }
