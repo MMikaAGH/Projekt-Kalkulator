@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <math.h>       /* sin */
+#include <math.h>       //sin 
 
 #define PI 3.14159265
 
@@ -55,7 +55,7 @@ double cotangens(double angle){
   
 int main(void) {
   int operationChoice1,operationChoice2;
-  double a,b,result, memory = 0.0;
+  double a,b,result, memory = 0;
   do {
     printf("Pamięć: %lf\n", memory);
     printf("  Wybierz:\n  1 - działania na liczbach\n  2 - funkcje trygonometryczne\n");
